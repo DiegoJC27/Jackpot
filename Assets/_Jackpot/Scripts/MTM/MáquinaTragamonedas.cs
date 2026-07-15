@@ -10,6 +10,7 @@ public class MaquinaTragamonedas : MonoBehaviour
     public bool spinnning = false;
     public void Spin()
     {
+        Debug.Log("Empieza as girar");
         spinnning = true;
         float plusTime = 0;
         foreach (Rueda rueda in ruedas) { 

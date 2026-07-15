@@ -3,7 +3,7 @@ using UnityEngine;
 public class Ranura : MonoBehaviour
 {
     public ColoresRanura miColor { private set; get; }
-    public Ficha fichaContenida { private set; get; }
+    public SC_Ficha fichaContenida { private set; get; }
 
     public void CambiarFichaConetnida(Ficha fichaNueva)
     {
