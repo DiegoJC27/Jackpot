@@ -1,9 +1,19 @@
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Ficha : MonoBehaviour
+public abstract class Ficha : MonoBehaviour
 {
+    //[SerializeField] SO_Ficha ficha;
     public string nombre;
     public string descripcion;
+    public Image imagen;
+    public Sprite sprite;
 
-    public void HacerMiAccion() { }
+    private void Start()
+    {
+        imagen = GetComponent<Image>();
+        imagen.sprite = sprite;
+    }
+
+    public abstract void HacerMiAccion();
 }

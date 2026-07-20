@@ -6,7 +6,7 @@ public class Palanca : MonoBehaviour
     public MaquinaTragamonedas mtm;
     public void PullLever()
     {
-        if (mtm.spinnning)
+        if (mtm.spinning)
         {
             Debug.Log("Esta girando");
             return;

@@ -4,13 +4,13 @@ public class Bloqueador : MonoBehaviour
 {
     public Rueda miRueda;
     public MaquinaTragamonedas mtm;
-    public void BlockWheel(bool block)
+    public void BlockWheel()
     {
-        if (mtm.spinnning == true)
+        if (mtm.spinning == true)
         {
             Debug.Log("Esta girando");
             return;  
         }
-        miRueda.SetBlocked(block);
+        miRueda.SetBlocked();
     }
 }

@@ -1,13 +1,35 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ranura : MonoBehaviour
 {
-    public ColoresRanura miColor { private set; get; }
-    public SC_Ficha fichaContenida { private set; get; }
+    [SerializeField] private Ficha fichaContenida;
+    public ColoresRanura miColor;
+    public Image borde;
 
-    public void CambiarFichaConetnida(Ficha fichaNueva)
+    private void Start()
     {
-        Debug.Log($"Cambio a {fichaNueva.nombre}");
+        SetRanuraColor();
+    }
+    public void CambiarFichaConetnida(Ficha nuevaFicha)
+    {
+        fichaContenida = nuevaFicha;
+    }
+
+    private void SetRanuraColor()
+    {
+        switch (miColor)
+        {
+            case ColoresRanura.verde:
+                borde.color = Color.green;
+                break;
+            case ColoresRanura.rojo:
+                borde.color = Color.red;
+                break;
+            case ColoresRanura.azul:
+                borde.color = Color.blue;
+                break;
+        }
     }
 }
 
