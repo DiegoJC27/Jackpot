@@ -1,11 +1,12 @@
 using UnityEngine;
 
-public class BaseState : CombatState
+public class MainPhase : CombatState
 {
-    public  BaseState(CombatStateMachine csm): base(csm) {}
+    public  MainPhase(CombatStateMachine csm, CombatState nxt) : base(csm, nxt) { }
     protected override void OnEnter()
     {
-        
+        Debug.Log("Entrando a MainPhase");
+
     }
     protected override void OnUpdate()
     {

@@ -12,7 +12,7 @@ public class MaquinaTragamonedas : MonoBehaviour
 
     private void Start()
     {
-        RestartWheels();
+        //RestartWheels();
     }
     public void Spin()
     {

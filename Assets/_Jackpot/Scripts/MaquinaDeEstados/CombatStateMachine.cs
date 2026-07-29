@@ -5,6 +5,11 @@ public class CombatStateMachine : MonoBehaviour
     public CombatState currentState => m_CurrentState;
     private CombatState m_CurrentState;
 
+    [SerializeField] private PlayerManager player;
+    //Referencia al Enemigo
+    [SerializeField] private CombatManager combatManager;
+
+
     private void Update() => m_CurrentState?.Update();
     public void ChangeState(CombatState newState)
     {

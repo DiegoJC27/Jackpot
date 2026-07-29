@@ -12,6 +12,11 @@ public class PlayerCombatUIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI curTokensText;
     [SerializeField] TextMeshProUGUI maxTokensText;
 
+    private void Start()
+    {
+        InitializeCombatStats();
+    }
+
     public void InitializeCombatStats()
     {
         UpdateMaxHP();

@@ -7,13 +7,15 @@ public abstract class CombatState
     public event Action<CombatState> OnStateEnter;
     public event Action<CombatState> OnStateUpdate;
     public event Action<CombatState> OnStateExit;
-    protected CombatStateMachine StateMachine;
+    protected CombatStateMachine stateMachine;
+    protected CombatState nextState;
 
     //public CombatState(Action<CombatState> changeStateMethod) => m_ChangeStateMethod = changeStateMethod;
     //protected List<(Func<bool> condition, CombatState nextState)> m_Transitions = new List<(Func<bool>, CombatState)>();
-    public CombatState(CombatStateMachine stateMachine)
+    public CombatState(CombatStateMachine _stateMachine, CombatState nxtState)
     {
-        StateMachine = stateMachine;
+        stateMachine = _stateMachine;
+        nextState = nxtState;
     }
 
     public void Enter()
