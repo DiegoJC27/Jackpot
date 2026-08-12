@@ -1,32 +1,30 @@
 using System;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour
-{
-    [SerializeField] int curHP;
-    [SerializeField] int maxHP;
+public class PlayerManager : CharacterManager
+{    
     [SerializeField] int maxTokens;
     [SerializeField] int curTokens;
-    [SerializeField] PlayerCombatUIManager pCombatUIMan;
+    [SerializeField] PlayerTokensUI pTokensUI;
 
-    public static PlayerManager instance {  get; private set; }
-    private void Awake()
+    protected override void Start()
     {
-        if (instance == null) instance = this;
-        else Destroy(this);
+        base.Start();
+        pTokensUI.UpdateCurTokens(curTokens);
+        pTokensUI.UpdateMaxTokens(maxTokens);
+
     }
     public int GetCurTokens() { return curTokens; }
-    public int GetMaxTokens() { return maxTokens; }
-    public int GetCurHP() { return curHP; }
-    public int GetMaxHP() { return maxHP; }
-    public void UpdateHP(int hpPlus)
-    {
-        curHP += hpPlus;
-        pCombatUIMan.UpdateCurHP();
-    }
+    public int GetMaxTokens() { return maxTokens; }   
     public void UpdateTokens(int tokensPlus)
     {
         curTokens += tokensPlus;
-        pCombatUIMan.UpdateCurTokens();
+        pTokensUI.UpdateCurTokens(curTokens);
+    }
+    public override void StartNewTurn()
+    {
+        curTokens = maxTokens;
+        pTokensUI.UpdateCurTokens(curTokens);
+        base.StartNewTurn();
     }
 }

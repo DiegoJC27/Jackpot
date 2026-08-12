@@ -2,28 +2,45 @@ using UnityEngine;
 
 public class CombatManager : MonoBehaviour
 {
-    [SerializeField] PlayerCombatUIManager playerCUIMan;
+    [SerializeField] PlayerManager player;
+    [SerializeField] EnemyManager enemy;
     [SerializeField] CombatStateMachine csm;
-    CombatPhase combatPhase;
-    EnemyPhase enemyPhase;
-    BegginingPhase begginingPhase;
-    MainPhase mainPhase;
-    EndPhase endPhase;
     private void Start()
     {
-        combatPhase = new CombatPhase(csm, enemyPhase);
-        enemyPhase = new EnemyPhase(csm, begginingPhase);
-        begginingPhase = new BegginingPhase(csm, mainPhase);
-        mainPhase = new MainPhase(csm, endPhase);
-        endPhase = new EndPhase(csm, combatPhase);
-        BegginCombat(); 
+        StartCombat();
     }
-    public void BegginCombat()
+    public void StartCombat()
     {
-        csm.ChangeState(enemyPhase);
+        csm.EnterEnemyPhase();
+    }
+    public void ResolveCombat()
+    {
+        ResolvePlayerDamage();
+        if(player.CurHP > 0 && enemy.CurHP > 0)
+        {
+            ResolveEnemyDamage();
+            if(player.CurHP<= 0)
+            {
+                EndCombat();
+            }
+        }
+        else
+        {
+            EndCombat();
+        }
+        csm.EnterEnemyPhase();
     }
     public void EndCombat()
     {
         Debug.Log("Fin del combate");
+    }
+
+    public void ResolvePlayerDamage()
+    {
+        enemy.RecibeDamage(player.CurDamage);
+    }
+    public void ResolveEnemyDamage()
+    {
+        player.RecibeDamage(enemy.CurDamage);
     }
 }

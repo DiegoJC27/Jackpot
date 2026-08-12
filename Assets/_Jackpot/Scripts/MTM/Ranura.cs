@@ -3,17 +3,34 @@ using UnityEngine.UI;
 
 public class Ranura : MonoBehaviour
 {
+    public Ficha MiFicha => fichaContenida;
     [SerializeField] private Ficha fichaContenida;
     public ColoresRanura miColor;
     public Image borde;
-
+    public Rueda miRueda;
+    public void SetMiRueda(Rueda rueda) 
+    {  
+        if(rueda == null)
+        {
+            Debug.LogError("La rueda que se intenta asignar es nula");
+            return;
+        }
+        miRueda = rueda; 
+        fichaContenida.SetMyCharacter(miRueda.MTM.MyCharacter);
+    }
     private void Start()
     {
         SetRanuraColor();
     }
     public void CambiarFichaConetnida(Ficha nuevaFicha)
     {
+        if (nuevaFicha == null)
+        {
+            Debug.LogError("La ficha que se intenta asignar es nula");
+            return;
+        }
         fichaContenida = nuevaFicha;
+        fichaContenida.SetMyCharacter(miRueda.MTM.MyCharacter);
     }
 
     private void SetRanuraColor()
@@ -29,6 +46,9 @@ public class Ranura : MonoBehaviour
             case ColoresRanura.azul:
                 borde.color = Color.blue;
                 break;
+            case ColoresRanura.notAsigned:
+                borde.color = Color.white;
+                break;
         }
     }
 }
@@ -37,5 +57,6 @@ public enum ColoresRanura
 {
     verde,
     rojo,
-    azul
+    azul,
+    notAsigned
 }

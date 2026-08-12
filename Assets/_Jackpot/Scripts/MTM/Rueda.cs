@@ -5,35 +5,42 @@ public class Rueda : MonoBehaviour
 {
     public int ruedaSize = 4;
     public Ranura[] ranuras;
-    public int ranuraSelected;
+    public Ranura ranuraSelected { get; private set; }
+    public int ranuraIndex;
     public bool bloqueado = false;
     public MaquinaTragamonedas MTM;
+
+    private void Start()
+    {
+        foreach(Ranura ranura in ranuras)
+        {
+            ranura.SetMiRueda(this);
+        }
+    }
     public IEnumerator SpinFor(float timeToSpin)
     {
         float elapsedTime = 0;
-        int newRanura = Random.Range(0,ruedaSize);
-        Debug.Log("Random = " + newRanura);
+        ranuraIndex = Random.Range(0,ruedaSize);
         while (timeToSpin > elapsedTime)
         {
-            ranuras[newRanura].gameObject.SetActive(false);
-            newRanura++;
-            if (newRanura % ruedaSize == 0 && newRanura != 0)
-                newRanura = 0;
-            ranuras[newRanura].gameObject.SetActive(true);
+            ranuras[ranuraIndex].gameObject.SetActive(false);
+            ranuraIndex++;
+            if (ranuraIndex % ruedaSize == 0 && ranuraIndex != 0)
+                ranuraIndex = 0;
+            ranuras[ranuraIndex].gameObject.SetActive(true);
             yield return new WaitForSeconds(0.15f);
             elapsedTime += 0.15f;
         }
+        ranuraSelected = ranuras[ranuraIndex];
         MTM.OnStopSpinning();
     }
 
     public  void SetBlocked()
     {
         bloqueado = !bloqueado;
-        Debug.Log("Se ha setado a: " + bloqueado);
     }
     public  void SetBlocked(bool block)
     {
         bloqueado = block;
-        Debug.Log("Se ha setado a: " + bloqueado);
     }
 }

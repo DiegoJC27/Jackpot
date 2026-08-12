@@ -8,7 +8,16 @@ public abstract class Ficha : MonoBehaviour
     public string descripcion;
     public Image imagen;
     public Sprite sprite;
-
+    public CharacterManager myCharacter;
+    public void SetMyCharacter(CharacterManager chara) { 
+        if(chara == null)
+        {
+            Debug.LogError("El CharacterManager que se intenta asignar es nulo");
+            return;
+        }
+        myCharacter = chara; 
+    }
+    
     private void Start()
     {
         imagen = GetComponent<Image>();

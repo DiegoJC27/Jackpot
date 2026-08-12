@@ -4,9 +4,11 @@ using UnityEngine.Rendering;
 public class Palanca : MonoBehaviour
 {
     public MaquinaTragamonedas mtm;
+    [SerializeField] PlayerManager player;
+    [SerializeField] CombatStateMachine csm;
     public void PullLever()
     {
-        if(PlayerManager.instance.GetCurTokens() <= 0)
+        if(player.GetCurTokens() <= 0)
         {
             Debug.Log("Ya no hay tokens");
             return;
@@ -16,7 +18,12 @@ public class Palanca : MonoBehaviour
             Debug.Log("Sigue girando");
             return;
         }
-        PlayerManager.instance.UpdateTokens(-1);
+        if (!csm.IsMainPhase())
+        {
+            Debug.Log("No es fase principal");
+            return;
+        }
+        player.UpdateTokens(-1);
         mtm.Spin();
     }
 }

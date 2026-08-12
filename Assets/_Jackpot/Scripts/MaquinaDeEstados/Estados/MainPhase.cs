@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MainPhase : CombatState
 {
-    public  MainPhase(CombatStateMachine csm, CombatState nxt) : base(csm, nxt) { }
+    public  MainPhase(CombatStateMachine csm) : base(csm) { }
     protected override void OnEnter()
     {
         Debug.Log("Entrando a MainPhase");

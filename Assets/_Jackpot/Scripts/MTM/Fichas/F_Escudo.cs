@@ -4,6 +4,6 @@ public class F_Escudo : Ficha
 {
     public override void HacerMiAccion()
     {
-        Debug.Log("Protejo");
+        myCharacter.UpdateBlock(1);
     }
 }

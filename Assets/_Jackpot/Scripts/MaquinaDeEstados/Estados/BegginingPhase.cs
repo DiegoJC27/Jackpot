@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class BegginingPhase : CombatState
 {
-    public  BegginingPhase(CombatStateMachine csm, CombatState nxt) : base(csm, nxt) { }
+    public  BegginingPhase(CombatStateMachine csm) : base(csm) { }
     protected override void OnEnter()
     {
         Debug.Log("Entrando a BegginingPhase");
-        stateMachine.ChangeState(nextState);
-
+        stateMachine.Player.StartNewTurn();
+        stateMachine.EnterMainPhase();
     }
     protected override void OnUpdate()
     {
