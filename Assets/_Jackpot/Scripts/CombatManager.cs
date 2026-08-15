@@ -5,8 +5,11 @@ public class CombatManager : MonoBehaviour
     [SerializeField] PlayerManager player;
     [SerializeField] EnemyManager enemy;
     [SerializeField] CombatStateMachine csm;
+
+    [SerializeField] GameObject combatEndScreen;
     private void Start()
     {
+        combatEndScreen.SetActive(false);
         StartCombat();
     }
     public void StartCombat()
@@ -33,6 +36,7 @@ public class CombatManager : MonoBehaviour
     public void EndCombat()
     {
         Debug.Log("Fin del combate");
+        combatEndScreen.SetActive(true);
     }
 
     public void ResolvePlayerDamage()
