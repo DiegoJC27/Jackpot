@@ -9,6 +9,7 @@ public class Rueda : MonoBehaviour
     public int ranuraIndex;
     public bool bloqueado = false;
     public MaquinaTragamonedas MTM;
+    public GameObject bloqueoIndicator;
 
     private void Start()
     {
@@ -35,12 +36,14 @@ public class Rueda : MonoBehaviour
         MTM.OnStopSpinning();
     }
 
-    public  void SetBlocked()
+    public  void ToggleBlocked()
     {
         bloqueado = !bloqueado;
+        bloqueoIndicator.SetActive(bloqueado);
     }
     public  void SetBlocked(bool block)
     {
         bloqueado = block;
+        bloqueoIndicator.SetActive(block);
     }
 }

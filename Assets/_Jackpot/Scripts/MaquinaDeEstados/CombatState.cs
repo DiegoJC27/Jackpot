@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.ShaderData;
 
 public abstract class CombatState
 {
@@ -9,6 +10,8 @@ public abstract class CombatState
     public event Action<CombatState> OnStateExit;
     protected CombatStateMachine stateMachine;
 
+    protected float delayTime = 1f;
+    protected float elapsedTime = 0f;
     public CombatState(CombatStateMachine _stateMachine)
     {
         stateMachine = _stateMachine;
@@ -33,4 +36,14 @@ public abstract class CombatState
     protected virtual void OnEnter() { }
     protected virtual void OnUpdate() { }
     protected virtual void OnExit() { }
+
+    protected bool TimerOver()
+    {
+        if (elapsedTime > delayTime)
+        {
+            elapsedTime = 0F;
+            return true;
+        }
+        return false;
+    }
 }

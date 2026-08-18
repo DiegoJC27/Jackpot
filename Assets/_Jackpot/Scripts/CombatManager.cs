@@ -16,35 +16,26 @@ public class CombatManager : MonoBehaviour
     {
         csm.EnterEnemyPhase();
     }
-    public void ResolveCombat()
-    {
-        ResolvePlayerDamage();
-        if(player.CurHP > 0 && enemy.CurHP > 0)
-        {
-            ResolveEnemyDamage();
-            if(player.CurHP<= 0)
-            {
-                EndCombat();
-            }
-        }
-        else
-        {
-            EndCombat();
-        }
-        csm.EnterEnemyPhase();
-    }
     public void EndCombat()
     {
         Debug.Log("Fin del combate");
+        csm.FinishCombat();
         combatEndScreen.SetActive(true);
     }
-
     public void ResolvePlayerDamage()
     {
         enemy.RecibeDamage(player.CurDamage);
+        if (enemy.CurHP < 0)
+        {
+            EndCombat();
+        }
     }
     public void ResolveEnemyDamage()
     {
         player.RecibeDamage(enemy.CurDamage);
+        if (player.CurHP <= 0)
+        {
+            EndCombat();
+        }
     }
 }
