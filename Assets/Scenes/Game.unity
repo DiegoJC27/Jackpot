@@ -620,10 +620,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 985254099}
     m_Modifications:
+    - target: {fileID: 1221505763704616758, guid: afba8486e0f5d854490bee6652d1e9a2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1949663522291035437, guid: afba8486e0f5d854490bee6652d1e9a2, type: 3}
       propertyPath: myCharacter
       value: 
       objectReference: {fileID: 1910892517}
+    - target: {fileID: 1949663522291035437, guid: afba8486e0f5d854490bee6652d1e9a2, type: 3}
+      propertyPath: ruedas.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426350638698618586, guid: afba8486e0f5d854490bee6652d1e9a2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 175
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724226381987905555, guid: afba8486e0f5d854490bee6652d1e9a2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 4464201104782563452, guid: afba8486e0f5d854490bee6652d1e9a2, type: 3}
       propertyPath: m_Name
       value: EnemyMTM
@@ -1253,6 +1269,10 @@ PrefabInstance:
       propertyPath: fichaContenida
       value: 
       objectReference: {fileID: 176938308}
+    - target: {fileID: 2131438263243133381, guid: 60b79873657e82944bd2cf530b540bf7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2299991997165695584, guid: 60b79873657e82944bd2cf530b540bf7, type: 3}
       propertyPath: m_Name
       value: MaquinaTragamonedas
@@ -1261,6 +1281,14 @@ PrefabInstance:
       propertyPath: fichaContenida
       value: 
       objectReference: {fileID: 1461288942}
+    - target: {fileID: 3678479876677353412, guid: 60b79873657e82944bd2cf530b540bf7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994360320105242893, guid: 60b79873657e82944bd2cf530b540bf7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4112254222337328945, guid: 60b79873657e82944bd2cf530b540bf7, type: 3}
       propertyPath: myCharacter
       value: 
@@ -2831,9 +2859,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 640549935}
     m_Modifications:
+    - target: {fileID: 136136601897046069, guid: 473d95ec2d76587458c1ab972d12491f, type: 3}
+      propertyPath: m_text
+      value: '0
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 2422929011904705053, guid: 473d95ec2d76587458c1ab972d12491f, type: 3}
       propertyPath: m_Name
       value: CombatUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121428779935263996, guid: 473d95ec2d76587458c1ab972d12491f, type: 3}
+      propertyPath: m_text
+      value: '0
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 6950407400304142562, guid: 473d95ec2d76587458c1ab972d12491f, type: 3}
       propertyPath: m_Value

@@ -25,7 +25,7 @@ public class CombatManager : MonoBehaviour
     public void ResolvePlayerDamage()
     {
         enemy.RecibeDamage(player.CurDamage);
-        if (enemy.CurHP < 0)
+        if (enemy.CurHP <= 0)
         {
             EndCombat();
         }

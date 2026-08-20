@@ -13,16 +13,15 @@ public abstract class CharacterManager : MonoBehaviour
     [SerializeField] public MaquinaTragamonedas mtm;
     [SerializeField] protected CombatManager combatManager;
     [SerializeField] protected CharacterCombatUI combatUI;
-
     protected virtual void Start()
     {
         combatUI.UpdateHP(curHP, maxHP);
     }
-
     public int GetCurHP() { return curHP; }
     public void UpdateHP(int hpPlus)
     {
         curHP += hpPlus;
+        Mathf.Clamp(curHP, 0, maxHP);
         combatUI.UpdateHP(curHP, maxHP);
     }
     public void RecibeDamage(int dmg)
@@ -37,7 +36,6 @@ public abstract class CharacterManager : MonoBehaviour
         combatUI.UpdateHP(curHP, maxHP);
     }
     public int GetMaxHP() { return maxHP; }
-
     public virtual void UpdateDamage(int dmgPlus)
     {
         curDamage += dmgPlus;
@@ -61,5 +59,4 @@ public abstract class CharacterManager : MonoBehaviour
         mtm.ResolveFichasActions();
         mtm.CheckSlotsColor();
     }
-
 }
