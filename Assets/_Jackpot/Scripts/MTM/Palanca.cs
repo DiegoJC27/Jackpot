@@ -4,7 +4,7 @@ using UnityEngine.Rendering;
 public class Palanca : MonoBehaviour
 {
     public MaquinaTragamonedas mtm;
-    [SerializeField] PlayerManager player;
+    [SerializeField] PlayerController player;
     [SerializeField] CombatStateMachine csm;
     public void PullLever()
     {

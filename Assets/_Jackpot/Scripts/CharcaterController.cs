@@ -1,39 +1,41 @@
 using UnityEngine;
 
-public abstract class CharacterManager : MonoBehaviour
+public abstract class CharacterController : MonoBehaviour
 {
-    public int CurHP => curHP;
-    [SerializeField] protected int curHP;
-    [SerializeField] protected int maxHP;
+    [SerializeField] protected CharacterManager charManager;
+    public int CurHP => charManager.CurHP;
+    protected int maxHP => charManager.MaxHP;
+    public MaquinaTragamonedas mtm => charManager.MTM;
+  
+    [Header("Combat Stats")]
     public int CurDamage => curDamage;
     [SerializeField] protected int curBlock;
     public int CurBlock => curBlock;
     [SerializeField] protected int curDamage;
-
-    [SerializeField] public MaquinaTragamonedas mtm;
+    [Space]
     [SerializeField] protected CombatManager combatManager;
     [SerializeField] protected CharacterCombatUI combatUI;
     protected virtual void Start()
     {
-        combatUI.UpdateHP(curHP, maxHP);
+        combatUI.UpdateHP(CurHP, maxHP);
     }
-    public int GetCurHP() { return curHP; }
+    public int GetCurHP() { return CurHP; }
     public void UpdateHP(int hpPlus)
     {
-        curHP += hpPlus;
-        Mathf.Clamp(curHP, 0, maxHP);
-        combatUI.UpdateHP(curHP, maxHP);
+        charManager.SetCurHP(CurHP + hpPlus);
+        Mathf.Clamp(CurHP, 0, maxHP);
+        combatUI.UpdateHP(CurHP, maxHP);
     }
     public void RecibeDamage(int dmg)
     {
         curBlock -= dmg;
         if (curBlock < 0)
         {
-            curHP += curBlock;
+            charManager.SetCurHP(CurHP + curBlock);
             curBlock = 0;
         }
         combatUI.UpdateBlockText(curBlock);
-        combatUI.UpdateHP(curHP, maxHP);
+        combatUI.UpdateHP(CurHP, maxHP);
     }
     public int GetMaxHP() { return maxHP; }
     public virtual void UpdateDamage(int dmgPlus)

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class PlayerManager : CharacterManager
+public class PlayerController : CharacterController
 {    
     [SerializeField] int maxTokens;
     [SerializeField] int curTokens;

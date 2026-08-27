@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class CombatManager : MonoBehaviour
 {
-    [SerializeField] PlayerManager player;
-    [SerializeField] EnemyManager enemy;
+    [SerializeField] PlayerController player;
+    [SerializeField] EnemyController enemy;
     [SerializeField] CombatStateMachine csm;
 
     [SerializeField] GameObject combatEndScreen;

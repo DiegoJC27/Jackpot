@@ -11,6 +11,9 @@ public class Rueda : MonoBehaviour
     public MaquinaTragamonedas MTM;
     public GameObject bloqueoIndicator;
 
+    public bool Locked => locked;
+    public bool locked = false;
+
     private void Start()
     {
         foreach(Ranura ranura in ranuras)
@@ -38,12 +41,16 @@ public class Rueda : MonoBehaviour
 
     public  void ToggleBlocked()
     {
+        if(Locked) return;
         bloqueado = !bloqueado;
         bloqueoIndicator.SetActive(bloqueado);
     }
     public  void SetBlocked(bool block)
     {
+        if(Locked) return;
         bloqueado = block;
         bloqueoIndicator.SetActive(block);
     }
+    public void Unlock() { locked = false; }
+    public void Lock() { locked = true; }
 }

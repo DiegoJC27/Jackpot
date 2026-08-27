@@ -7,10 +7,10 @@ public class CombatStateMachine : MonoBehaviour
     private CombatState m_CurrentState;
     public CombatManager CombatManager => m_CombatManager;
     [SerializeField] private CombatManager m_CombatManager;
-    public PlayerManager Player => m_Player;
-    [SerializeField] private PlayerManager m_Player;
-    public EnemyManager Enemy => m_Enemy;
-    [SerializeField] private EnemyManager m_Enemy;
+    public PlayerController Player => m_Player;
+    [SerializeField] private PlayerController m_Player;
+    public EnemyController Enemy => m_Enemy;
+    [SerializeField] private EnemyController m_Enemy;
 
     private CombatPhase combatPhase;
     private EnemyPhase enemyPhase;

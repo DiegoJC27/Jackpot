@@ -13,14 +13,18 @@ public class MaquinaTragamonedas : MonoBehaviour
     int wheelsSpinning = 0;
 
     public event Action OnWheelsStopSpinning; 
-    public CharacterManager MyCharacter => myCharacter;
-    [SerializeField] private CharacterManager myCharacter;
+    public CharacterController MyCharacter => myCharacter;
+    [SerializeField] private CharacterController myCharacter;
     public void Spin()
     {
         spinning = true;
         float plusTime = 0;
-        foreach (Rueda rueda in ruedas) { 
-            if(rueda.bloqueado) continue;
+        foreach (Rueda rueda in ruedas) {
+            if (rueda.bloqueado)
+            {
+                rueda.Lock();
+                continue;
+            }
             
             StartCoroutine(rueda.SpinFor(spinTime +  plusTime));
             plusTime += plusSpinTime;
@@ -40,6 +44,7 @@ public class MaquinaTragamonedas : MonoBehaviour
     {
         foreach(Rueda rueda in ruedas)
         {
+            rueda.Unlock();
             rueda.SetBlocked(false);
         }
         Spin();
