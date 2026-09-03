@@ -2,15 +2,13 @@ using UnityEngine;
 
 public class EnemyPhase : CombatState
 {
-    private MaquinaTragamonedas mtm;
-    public EnemyPhase(CombatStateMachine csm, MaquinaTragamonedas _mtm) : base(csm) {
-        mtm = _mtm;
-    }
+    public EnemyPhase(CombatStateMachine csm) : base(csm) { }
+    
     protected override void OnEnter()
     {
         Debug.Log("Entrando a EnemyPhase");
         stateMachine.Enemy.StartNewTurn();
-        mtm.OnWheelsStopSpinning += OnWheelsStopSpinning;
+        stateMachine.Enemy.mtm.OnWheelsStopSpinning += OnWheelsStopSpinning;
     }
     protected override void OnUpdate()
     {
@@ -23,7 +21,7 @@ public class EnemyPhase : CombatState
 
     private void OnWheelsStopSpinning()
     {
-        mtm.OnWheelsStopSpinning -= OnWheelsStopSpinning;
+        stateMachine.Enemy.mtm.OnWheelsStopSpinning -= OnWheelsStopSpinning;
         stateMachine.Enemy.ResolveMTM();
         stateMachine.EnterPlayerTurn();
     }

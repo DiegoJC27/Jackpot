@@ -1,3 +1,4 @@
+using System.Net.Sockets;
 using UnityEngine;
 
 public abstract class CharacterController : MonoBehaviour
@@ -13,17 +14,10 @@ public abstract class CharacterController : MonoBehaviour
     public int CurBlock => curBlock;
     [SerializeField] protected int curDamage;
     [Space]
-    [SerializeField] protected CombatManager combatManager;
+    //[SerializeField] protected CombatManager combatManager;
     [SerializeField] protected CharacterCombatUI combatUI;
     protected virtual void Start()
     {
-        combatUI.UpdateHP(CurHP, maxHP);
-    }
-    public int GetCurHP() { return CurHP; }
-    public void UpdateHP(int hpPlus)
-    {
-        charManager.SetCurHP(CurHP + hpPlus);
-        Mathf.Clamp(CurHP, 0, maxHP);
         combatUI.UpdateHP(CurHP, maxHP);
     }
     public void RecibeDamage(int dmg)
@@ -37,7 +31,6 @@ public abstract class CharacterController : MonoBehaviour
         combatUI.UpdateBlockText(curBlock);
         combatUI.UpdateHP(CurHP, maxHP);
     }
-    public int GetMaxHP() { return maxHP; }
     public virtual void UpdateDamage(int dmgPlus)
     {
         curDamage += dmgPlus;
@@ -48,12 +41,16 @@ public abstract class CharacterController : MonoBehaviour
         curBlock += blkPlus;
         combatUI.UpdateBlockText(curBlock);
     }
-    public virtual void StartNewTurn()
+    public void ResetCombatStats()
     {
         curBlock = 0;
         combatUI.UpdateBlockText(curBlock);
         curDamage = 0;
         combatUI.UpdateDamageText(curDamage);
+    }
+    public virtual void StartNewTurn()
+    {
+        ResetCombatStats();
         mtm.RestartWheels();
     }
     public virtual void ResolveMTM()
@@ -61,4 +58,7 @@ public abstract class CharacterController : MonoBehaviour
         mtm.ResolveFichasActions();
         mtm.CheckSlotsColor();
     }
+    //public void SetMyCombatManager(CombatManager _combatManager) { 
+    //    combatManager = _combatManager; 
+    //}
 }

@@ -92,9 +92,21 @@ PrefabInstance:
       propertyPath: mtm
       value: 
       objectReference: {fileID: 4748939182268134224}
+    - target: {fileID: 3834525486692899480, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
+      propertyPath: mtm
+      value: 
+      objectReference: {fileID: 4748939182268134224}
     - target: {fileID: 4586682448949417135, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
       propertyPath: m_Name
       value: Enemy 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305691251268107674, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305691251268107674, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -105,9 +117,9 @@ PrefabInstance:
       addedObject: {fileID: 2325947264956107058}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
---- !u!114 &879797085098748313 stripped
+--- !u!114 &2700492235795347255 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4788082329117669512, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7727356906969638438, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
   m_PrefabInstance: {fileID: 5640482878352396561}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -136,7 +148,15 @@ PrefabInstance:
     - target: {fileID: 3811851058913987047, guid: b10668b8792d45a4fb1296cc358a135c, type: 3}
       propertyPath: myCharacter
       value: 
-      objectReference: {fileID: 879797085098748313}
+      objectReference: {fileID: 2700492235795347255}
+    - target: {fileID: 4706237191296137509, guid: b10668b8792d45a4fb1296cc358a135c, type: 3}
+      propertyPath: miColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984831348590995436, guid: b10668b8792d45a4fb1296cc358a135c, type: 3}
+      propertyPath: miColor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6144767959987745669, guid: b10668b8792d45a4fb1296cc358a135c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -217,6 +237,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6395893564373386979, guid: b10668b8792d45a4fb1296cc358a135c, type: 3}
+      propertyPath: miColor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6395893564373386979, guid: b10668b8792d45a4fb1296cc358a135c, type: 3}
+      propertyPath: fichaContenida
+      value: 
+      objectReference: {fileID: 1801310020055469267}
     - target: {fileID: 6542290116944408531, guid: b10668b8792d45a4fb1296cc358a135c, type: 3}
       propertyPath: ruedaSize
       value: 3
@@ -232,6 +260,14 @@ PrefabInstance:
     - target: {fileID: 6820884480665481498, guid: b10668b8792d45a4fb1296cc358a135c, type: 3}
       propertyPath: ranuras.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915666044145471367, guid: b10668b8792d45a4fb1296cc358a135c, type: 3}
+      propertyPath: miColor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169977894174155142, guid: b10668b8792d45a4fb1296cc358a135c, type: 3}
+      propertyPath: miColor
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8381783885403111890, guid: b10668b8792d45a4fb1296cc358a135c, type: 3}
       propertyPath: ruedaSize
@@ -246,6 +282,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b10668b8792d45a4fb1296cc358a135c, type: 3}
+--- !u!114 &1801310020055469267 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7925909535066650212, guid: b10668b8792d45a4fb1296cc358a135c, type: 3}
+  m_PrefabInstance: {fileID: 8431289709753629367}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581863f63c586d84bb833f953ad984e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::F_Espada
 --- !u!224 &2325947264956107058 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6144767959987745669, guid: b10668b8792d45a4fb1296cc358a135c, type: 3}

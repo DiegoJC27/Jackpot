@@ -17,6 +17,7 @@ public class Ranura : MonoBehaviour
         }
         miRueda = rueda; 
         fichaContenida.SetMyCharacter(miRueda.MTM.MyCharacter);
+        fichaContenida.SetMyRanura(this);
     }
     private void Start()
     {

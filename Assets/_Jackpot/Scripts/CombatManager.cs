@@ -7,13 +7,18 @@ public class CombatManager : MonoBehaviour
     [SerializeField] CombatStateMachine csm;
 
     [SerializeField] GameObject combatEndScreen;
+    [SerializeField] CombatSelector combatSelector;
     private void Start()
     {
+        if (combatSelector == null) combatSelector = GetComponent<CombatSelector>();
+
         combatEndScreen.SetActive(false);
         StartCombat();
     }
     public void StartCombat()
     {
+        enemy = combatSelector.InstantiateRandomEnemy();
+        csm.SetEnemy(enemy);
         csm.EnterEnemyPhase();
     }
     public void EndCombat()
@@ -37,5 +42,11 @@ public class CombatManager : MonoBehaviour
         {
             EndCombat();
         }
+    }
+
+    public void ResetCombatStats()
+    {
+        player.ResetCombatStats();
+        enemy.ResetCombatStats();
     }
 }

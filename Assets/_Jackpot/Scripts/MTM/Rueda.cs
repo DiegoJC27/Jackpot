@@ -3,13 +3,12 @@ using UnityEngine;
 
 public class Rueda : MonoBehaviour
 {
-    public int ruedaSize = 4;
     public Ranura[] ranuras;
     public Ranura ranuraSelected { get; private set; }
     public int ranuraIndex;
     public bool bloqueado = false;
     public MaquinaTragamonedas MTM;
-    public GameObject bloqueoIndicator;
+    public GameObject lockIndicator;
 
     public bool Locked => locked;
     public bool locked = false;
@@ -24,12 +23,12 @@ public class Rueda : MonoBehaviour
     public IEnumerator SpinFor(float timeToSpin)
     {
         float elapsedTime = 0;
-        ranuraIndex = Random.Range(0,ruedaSize);
+        ranuraIndex = Random.Range(0,ranuras.Length);
         while (timeToSpin > elapsedTime)
         {
             ranuras[ranuraIndex].gameObject.SetActive(false);
             ranuraIndex++;
-            if (ranuraIndex % ruedaSize == 0 && ranuraIndex != 0)
+            if (ranuraIndex % ranuras.Length == 0 && ranuraIndex != 0)
                 ranuraIndex = 0;
             ranuras[ranuraIndex].gameObject.SetActive(true);
             yield return new WaitForSeconds(0.15f);
@@ -43,14 +42,18 @@ public class Rueda : MonoBehaviour
     {
         if(Locked) return;
         bloqueado = !bloqueado;
-        bloqueoIndicator.SetActive(bloqueado);
     }
     public  void SetBlocked(bool block)
     {
         if(Locked) return;
         bloqueado = block;
-        bloqueoIndicator.SetActive(block);
     }
-    public void Unlock() { locked = false; }
-    public void Lock() { locked = true; }
+    public void Unlock() { 
+        locked = false; 
+        lockIndicator.SetActive(locked);
+    }
+    public void Lock() { 
+        locked = true; 
+        lockIndicator.SetActive(locked);
+    }
 }

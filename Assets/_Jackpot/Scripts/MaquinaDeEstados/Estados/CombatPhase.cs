@@ -36,6 +36,7 @@ public class CombatPhase : CombatState
                 break;
             case Phases.exit:
                 if (TimerOver())
+                    stateMachine.CombatManager.ResetCombatStats();
                     stateMachine.EnterEnemyPhase();
                 break;
 

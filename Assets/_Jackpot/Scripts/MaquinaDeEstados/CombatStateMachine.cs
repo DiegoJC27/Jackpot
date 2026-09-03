@@ -21,7 +21,7 @@ public class CombatStateMachine : MonoBehaviour
     private void Awake()
     {
         combatPhase = new CombatPhase(this);
-        enemyPhase = new EnemyPhase(this, m_Enemy.mtm);
+        enemyPhase = new EnemyPhase(this);
         begginingPhase = new BegginingPhase(this);
         mainPhase = new MainPhase(this);
         endPhase = new EndPhase(this);
@@ -36,7 +36,13 @@ public class CombatStateMachine : MonoBehaviour
         m_CurrentState = newState;
         m_CurrentState.Enter();
     }
-
+    public bool IsMainPhase()
+        {
+            return m_CurrentState == mainPhase;
+        }
+    public void SetEnemy(EnemyController enemy) { 
+        m_Enemy = enemy; 
+    }
     public void EnterEnemyPhase()
     {
         if(m_CurrentState == null || m_CurrentState == combatPhase)
@@ -68,14 +74,9 @@ public class CombatStateMachine : MonoBehaviour
         if (m_CurrentState == endPhase)
             ChangeState(combatPhase);
     }
-
     public void FinishCombat()
     {
         ChangeState(combatEndPhase);
     }
-
-    public bool IsMainPhase()
-    {
-        return m_CurrentState == mainPhase;
-    }
+    
 }

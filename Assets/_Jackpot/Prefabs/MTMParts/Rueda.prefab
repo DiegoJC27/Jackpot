@@ -128,7 +128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc0362266da6884cbeaa29e312b3def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rueda
-  ruedaSize: 4
   ranuras:
   - {fileID: 4601078760045608004}
   - {fileID: 4360524951782484969}
@@ -137,7 +136,8 @@ MonoBehaviour:
   ranuraIndex: 0
   bloqueado: 0
   MTM: {fileID: 0}
-  bloqueoIndicator: {fileID: 3564343319047792825}
+  lockIndicator: {fileID: 3564343319047792825}
+  locked: 0
 --- !u!1001 &2584172482724479043
 PrefabInstance:
   m_ObjectHideFlags: 0

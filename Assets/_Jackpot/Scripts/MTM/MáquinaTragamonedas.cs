@@ -77,14 +77,12 @@ public class MaquinaTragamonedas : MonoBehaviour
         switch (color)
         {
             case ColoresRanura.azul:
-                myCharacter.UpdateBlock(5);
+                myCharacter.UpdateBlock(ruedas.Count);
                 break;
             case ColoresRanura.rojo:
-                myCharacter.UpdateDamage(5);
+                myCharacter.UpdateDamage(ruedas.Count);
                 break;
             case ColoresRanura.verde:
-                myCharacter.UpdateBlock(myCharacter.CurBlock);
-                myCharacter.UpdateDamage(myCharacter.CurDamage);
                 break;
             case ColoresRanura.notAsigned:
                 Debug.Log("Algo se echó a perder, color no asignado");

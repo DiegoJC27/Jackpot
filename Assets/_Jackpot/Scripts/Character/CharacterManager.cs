@@ -11,12 +11,8 @@ public class CharacterManager : MonoBehaviour
 
     private void Awake()
     {
-        if (maxHP == default)
-            maxHP = 10;
-        if (curHP == default)
-            curHP = maxHP;
         if(mtm == null)
-            mtm = GetComponent<MaquinaTragamonedas>();
+            mtm = GetComponentInChildren<MaquinaTragamonedas>();
         if(mtm == null)
             Debug.LogError("No se ha asignado la referencia a MaquinaTragamonedas en el CharacterManager.");
     }
