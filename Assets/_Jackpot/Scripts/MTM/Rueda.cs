@@ -42,11 +42,14 @@ public class Rueda : MonoBehaviour
     {
         if(Locked) return;
         bloqueado = !bloqueado;
+        lockIndicator.SetActive(bloqueado);
     }
     public  void SetBlocked(bool block)
     {
         if(Locked) return;
         bloqueado = block;
+        lockIndicator.SetActive(bloqueado);
+
     }
     public void Unlock() { 
         locked = false; 

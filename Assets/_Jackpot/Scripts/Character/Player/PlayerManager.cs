@@ -8,9 +8,20 @@ public class PlayerManager : CharacterManager
         if (instance != null && instance != this)
         {
             Destroy(this);
-            return;
         }
-        instance = this;
-        DontDestroyOnLoad(this.gameObject);
+        else{
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+    }
+
+    public void SetMTM(MaquinaTragamonedas _mtm)
+    {
+        this.mtm = _mtm;
+    }
+
+    public void DoesDestroy()
+    {
+        Destroy(this.gameObject);
     }
 }

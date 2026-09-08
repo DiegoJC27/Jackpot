@@ -343,11 +343,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3834525486692899480, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
       propertyPath: curHP
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3834525486692899480, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
       propertyPath: maxHP
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4586682448949417135, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
       propertyPath: m_Name
@@ -355,16 +355,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4664744600240583491, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
       propertyPath: ranuras.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4664744600240583491, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
+      propertyPath: 'ranuras.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2503841246825860731}
+    - target: {fileID: 4664744600240583491, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
+      propertyPath: 'ranuras.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8931427833554490966}
     - target: {fileID: 4664744600240583491, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
       propertyPath: 'ranuras.Array.data[4]'
       value: 
       objectReference: {fileID: 8931427833554490966}
     - target: {fileID: 4962619372868578698, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
       propertyPath: ranuras.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4962619372868578698, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
+      propertyPath: 'ranuras.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4780579038468578337}
+    - target: {fileID: 4962619372868578698, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
+      propertyPath: 'ranuras.Array.data[1]'
+      value: 
+      objectReference: {fileID: 6380698375320499274}
+    - target: {fileID: 4962619372868578698, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
+      propertyPath: 'ranuras.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2800440860507476146}
+    - target: {fileID: 4962619372868578698, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
+      propertyPath: 'ranuras.Array.data[3]'
+      value: 
+      objectReference: {fileID: 206228762612344114}
     - target: {fileID: 4962619372868578698, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
       propertyPath: 'ranuras.Array.data[4]'
       value: 
@@ -374,13 +398,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4395541856836391492, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
+    - {fileID: 2373239754340283211, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1175709757648320585, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
-      insertIndex: 4
+      insertIndex: 3
       addedObject: {fileID: 1605597471798386993}
     - targetCorrespondingSourceObject: {fileID: 1455421010166277760, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
-      insertIndex: 4
+      insertIndex: 3
       addedObject: {fileID: 8027208769219433045}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
@@ -394,6 +420,39 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1455421010166277760, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
   m_PrefabInstance: {fileID: 267191061826507263}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2503841246825860731 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2380766497427611524, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
+  m_PrefabInstance: {fileID: 267191061826507263}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1510458e20a7ac4d97b22255f84cb17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ranura
+--- !u!114 &2800440860507476146 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2695522003088933197, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
+  m_PrefabInstance: {fileID: 267191061826507263}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1510458e20a7ac4d97b22255f84cb17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ranura
+--- !u!114 &4780579038468578337 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4750531884936400350, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
+  m_PrefabInstance: {fileID: 267191061826507263}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1510458e20a7ac4d97b22255f84cb17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ranura
 --- !u!114 &5146353080368479349 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4962619372868578698, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
@@ -405,6 +464,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc0362266da6884cbeaa29e312b3def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rueda
+--- !u!114 &6380698375320499274 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6573438544280806837, guid: 244ea1840712da04e9215fdecfbf990e, type: 3}
+  m_PrefabInstance: {fileID: 267191061826507263}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1510458e20a7ac4d97b22255f84cb17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ranura
 --- !u!1001 &6229743169088812962
 PrefabInstance:
   m_ObjectHideFlags: 0

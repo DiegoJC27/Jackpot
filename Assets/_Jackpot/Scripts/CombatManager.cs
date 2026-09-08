@@ -6,13 +6,15 @@ public class CombatManager : MonoBehaviour
     [SerializeField] EnemyController enemy;
     [SerializeField] CombatStateMachine csm;
 
-    [SerializeField] GameObject combatEndScreen;
+    [SerializeField] GameObject combatLosecreen;
+    [SerializeField] GameObject combatRewardsScreen;
     [SerializeField] CombatSelector combatSelector;
     private void Start()
     {
         if (combatSelector == null) combatSelector = GetComponent<CombatSelector>();
 
-        combatEndScreen.SetActive(false);
+        combatLosecreen.SetActive(false);
+        combatRewardsScreen.SetActive(false);
         StartCombat();
     }
     public void StartCombat()
@@ -21,18 +23,13 @@ public class CombatManager : MonoBehaviour
         csm.SetEnemy(enemy);
         csm.EnterEnemyPhase();
     }
-    public void EndCombat()
-    {
-        Debug.Log("Fin del combate");
-        csm.FinishCombat();
-        combatEndScreen.SetActive(true);
-    }
     public void ResolvePlayerDamage()
     {
         enemy.RecibeDamage(player.CurDamage);
         if (enemy.CurHP <= 0)
         {
-            EndCombat();
+            csm.FinishCombat();
+            combatRewardsScreen.SetActive(true);
         }
     }
     public void ResolveEnemyDamage()
@@ -40,7 +37,8 @@ public class CombatManager : MonoBehaviour
         player.RecibeDamage(enemy.CurDamage);
         if (player.CurHP <= 0)
         {
-            EndCombat();
+            csm.FinishCombat();
+            combatLosecreen.SetActive(true);
         }
     }
 

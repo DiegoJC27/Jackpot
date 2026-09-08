@@ -7,7 +7,7 @@ public abstract class CharacterController : MonoBehaviour
     public int CurHP => charManager.CurHP;
     protected int maxHP => charManager.MaxHP;
     public MaquinaTragamonedas mtm => charManager.MTM;
-  
+
     [Header("Combat Stats")]
     public int CurDamage => curDamage;
     [SerializeField] protected int curBlock;

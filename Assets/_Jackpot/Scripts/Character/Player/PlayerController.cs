@@ -7,8 +7,16 @@ public class PlayerController : CharacterController
     [SerializeField] int curTokens;
     [SerializeField] PlayerTokensUI pTokensUI;
 
+    [SerializeField] protected MaquinaTragamonedas maquinaTragamonedas;
+
+
     protected override void Start()
-    {
+    {       
+        if(PlayerManager.instance.MTM == null)
+            PlayerManager.instance.SetMTM(maquinaTragamonedas);
+
+        if (charManager == null)
+            charManager = PlayerManager.instance;   
         base.Start();
         pTokensUI.UpdateCurTokens(curTokens);
         pTokensUI.UpdateMaxTokens(maxTokens);
