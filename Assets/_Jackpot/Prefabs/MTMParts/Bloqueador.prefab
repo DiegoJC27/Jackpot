@@ -52,7 +52,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Bloqueador
   miRueda: {fileID: 0}
   mtm: {fileID: 0}
-  selectedScreen: {fileID: 0}
 --- !u!1 &2987872433729242680
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6710573, g: 0.67766374, b: 0.6839622, a: 1}
+  m_Color: {r: 0.5198469, g: 0.5435905, b: 0.5566038, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
