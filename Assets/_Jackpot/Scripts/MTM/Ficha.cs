@@ -1,16 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class Ficha : MonoBehaviour
+public abstract class Ficha : InfoDisplayer
 {
-    //[SerializeField] SO_Ficha ficha;
-    public string nombre;
-    public string descripcion;
     public Image imagen;
     public Sprite sprite;
     public CharacterController myCharacter;
     public Ranura myRanura;
-
+    public bool exhausted = false;
     bool alreadyDoubled = false;
     public void SetMyCharacter(CharacterController chara) { 
         if(chara == null)

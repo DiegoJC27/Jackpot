@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : CharacterController
 {    
@@ -11,16 +12,14 @@ public class PlayerController : CharacterController
 
 
     protected override void Start()
-    {       
-        if(PlayerManager.instance.MTM == null)
-            PlayerManager.instance.SetMTM(maquinaTragamonedas);
-
+    {
         if (charManager == null)
-            charManager = PlayerManager.instance;   
+            charManager = GetComponent<PlayerManager>();
+        
         base.Start();
+
         pTokensUI.UpdateCurTokens(curTokens);
         pTokensUI.UpdateMaxTokens(maxTokens);
-
     }
     public int GetCurTokens() { return curTokens; }
     public int GetMaxTokens() { return maxTokens; }   

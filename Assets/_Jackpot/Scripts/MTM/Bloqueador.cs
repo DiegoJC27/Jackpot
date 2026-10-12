@@ -9,7 +9,7 @@ public class Bloqueador : MonoBehaviour
     {
         if (mtm.spinning == true)
         {
-            Debug.Log("Esta girando");
+            Debug.LogWarning("Esta girando");
             return;  
         }
         miRueda.ToggleBlocked();

@@ -58,7 +58,4 @@ public abstract class CharacterController : MonoBehaviour
         mtm.ResolveFichasActions();
         mtm.CheckSlotsColor();
     }
-    //public void SetMyCombatManager(CombatManager _combatManager) { 
-    //    combatManager = _combatManager; 
-    //}
 }
