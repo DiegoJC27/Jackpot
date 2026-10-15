@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: casino_0
+      name: cuerpo
       rect:
         serializedVersion: 2
         x: 25
         y: 58
-        width: 228
-        height: 162
+        width: 206
+        height: 140
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,6 +117,50 @@ TextureImporter:
       bones: []
       spriteID: 690bc7f45ff6d0d30800000000000000
       internalID: 4399295510402085014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luz
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 198
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c8fd59a37a7f34fae952369f6343b2
+      internalID: 244112528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palanca
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 107
+        width: 26
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb4614977841eb4f9de59ec6539c0ee
+      internalID: -509312664
       vertices: []
       indices: 
       edges: []
@@ -135,7 +179,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      casino_0: 4399295510402085014
+      Luz: 244112528
+      Palanca: -509312664
+      cuerpo: 4399295510402085014
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

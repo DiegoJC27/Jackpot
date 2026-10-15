@@ -8,9 +8,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1935625242877318052, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -718180021, guid: 548a4c018bde4d54f9a3a1a2c6b16b1b, type: 3}
     - target: {fileID: 5519162485831548249, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
       propertyPath: m_Name
       value: F_Broquell
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860773629599204507, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860773629599204507, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6347499248252398728, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
       propertyPath: m_Pivot.x
@@ -100,17 +112,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: -3074433692234620827}
   m_SourcePrefab: {fileID: 100100000, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
---- !u!114 &4122766144179039020 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3779366916432197411, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
-  m_PrefabInstance: {fileID: 955893252425358351}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f06c8b804341034e80fd3df65a21c08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InformationPanel
 --- !u!1 &4745671213603823958 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5519162485831548249, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
@@ -128,12 +129,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5720c5f355e094a94e0a3e227f57c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::F_Escudo
-  miPanel: {fileID: 4122766144179039020}
+  miPanel: {fileID: 0}
   objName: Broquel
-  type: Ficha
+  type: 0
   description: +1 defensa
+  elapsedStay: 0
   imagen: {fileID: 0}
-  sprite: {fileID: -6152023136689018493, guid: 708d3a4f1c7c6d943a5505be28cae74e, type: 3}
+  sprite: {fileID: -718180021, guid: 548a4c018bde4d54f9a3a1a2c6b16b1b, type: 3}
   myCharacter: {fileID: 0}
   myRanura: {fileID: 0}
   exhausted: 0

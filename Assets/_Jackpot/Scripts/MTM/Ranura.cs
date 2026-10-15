@@ -6,7 +6,7 @@ public class Ranura : MonoBehaviour
     public Ficha MiFicha => fichaContenida;
     [SerializeField] private Ficha fichaContenida;
     public ColoresRanura miColor;
-    public Image borde;
+    public SpriteRenderer borde;
     public Rueda miRueda;
     public void SetMiRueda(Rueda rueda) 
     {  

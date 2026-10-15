@@ -7,15 +7,21 @@ public abstract class InfoDisplayer : MonoBehaviour
     public string objName;
     public ObjectType type;
     public string description;
-
-    private void OnMouseEnter()
+    public const float TIMETOSHOW = 0.5f;
+    public float elapsedStay = 0f;
+    private void OnMouseStay()
     {
-        miPanel.gameObject.SetActive(true);
-        Debug.Log("Mouse entered " + objName);
+        elapsedStay += Time.deltaTime;
+        if(elapsedStay >= TIMETOSHOW)
+        {
+            miPanel.gameObject.SetActive(true);
+            Debug.Log("Mouse stayed on " + objName);
+        }
     }
     private void OnMouseExit()
     {
         miPanel.gameObject.SetActive(false);
+        elapsedStay = 0f;
     }
 
     protected virtual void Start()

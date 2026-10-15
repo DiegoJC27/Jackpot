@@ -8,9 +8,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1935625242877318052, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7491653927272227976, guid: 32e3ce1c3e236444f864531923f8e83b, type: 3}
     - target: {fileID: 5519162485831548249, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
       propertyPath: m_Name
-      value: F_Espada
+      value: F_Daga
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860773629599204507, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860773629599204507, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 6347499248252398728, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
       propertyPath: m_Pivot.x
@@ -100,17 +112,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1539644901212747260}
   m_SourcePrefab: {fileID: 100100000, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
---- !u!114 &1850353033448143468 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3779366916432197411, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
-  m_PrefabInstance: {fileID: 3305295127533309263}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f06c8b804341034e80fd3df65a21c08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InformationPanel
 --- !u!1 &7009506894810542102 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5519162485831548249, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
@@ -128,10 +129,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581863f63c586d84bb833f953ad984e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::F_Espada
-  miPanel: {fileID: 1850353033448143468}
+  miPanel: {fileID: 0}
   objName: Daga
-  type: Ficha
+  type: 0
   description: "+1 da\xF1o"
+  elapsedStay: 0
   imagen: {fileID: 0}
   sprite: {fileID: 7491653927272227976, guid: 32e3ce1c3e236444f864531923f8e83b, type: 3}
   myCharacter: {fileID: 0}

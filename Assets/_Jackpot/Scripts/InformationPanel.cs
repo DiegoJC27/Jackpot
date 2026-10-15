@@ -16,14 +16,17 @@ public class InformationPanel : MonoBehaviour
             miInfoObj = GetComponentInParent<InfoDisplayer>();
             if (miInfoObj == null)
                 Debug.LogError("No se encontró el componente Ficha en el GameObject.");   
-        }
-
-        nameText.text = miInfoObj.objName;
-        typeText.text = miInfoObj.type.ToString();
-        descriptionText.text = miInfoObj.description;
+        }        
         gameObject.SetActive(false);
         transform.SetAsLastSibling();
     }    
+
+    public void ObtainObjInfo()
+    {
+        nameText.text = miInfoObj.objName;
+        typeText.text = miInfoObj.type.ToString();
+        descriptionText.text = miInfoObj.description;
+    }
 }
 
 
