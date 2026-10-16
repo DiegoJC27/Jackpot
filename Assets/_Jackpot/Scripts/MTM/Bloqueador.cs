@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class Bloqueador : MonoBehaviour
+public class Bloqueador : MTMTButton
 {
     public Rueda miRueda;
     public MaquinaTragamonedas mtm;
     
-    public void BlockWheel()
+    public override void OnClick()
     {
         if (mtm.spinning == true)
         {

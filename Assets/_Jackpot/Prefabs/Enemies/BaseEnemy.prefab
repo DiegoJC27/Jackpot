@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2773008825692002404}
-  - component: {fileID: 6391032808361755556}
   - component: {fileID: 7727356906969638438}
   - component: {fileID: 3834525486692899480}
   m_Layer: 5
@@ -35,23 +34,6 @@ Transform:
   - {fileID: 5706337435928145685}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6391032808361755556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4586682448949417135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be915ba7aca971d4b8f03e1b3f87a361, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterCombatUI
-  curHPText: {fileID: 0}
-  healthBar: {fileID: 0}
-  maxHPText: {fileID: 0}
-  curBlockText: {fileID: 0}
-  curDamageText: {fileID: 0}
 --- !u!114 &7727356906969638438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,7 +49,7 @@ MonoBehaviour:
   charManager: {fileID: 3834525486692899480}
   curBlock: 0
   curDamage: 0
-  combatUI: {fileID: 6391032808361755556}
+  combatUI: {fileID: 0}
 --- !u!114 &3834525486692899480
 MonoBehaviour:
   m_ObjectHideFlags: 0

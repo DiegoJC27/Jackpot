@@ -1730,7 +1730,7 @@ MonoBehaviour:
   - {fileID: 8205609278035723710, guid: ba3d8ade7bf28134ea2f02ff6978cb95, type: 3}
   combatManager: {fileID: 786658219}
   enemyTrans: {fileID: 460923507}
-  enemyCombatUI: {fileID: 0}
+  enemyCombatUI: {fileID: 1793033353}
 --- !u!1 &788495130
 GameObject:
   m_ObjectHideFlags: 0
@@ -2586,6 +2586,61 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8685354558688181356, guid: 473d95ec2d76587458c1ab972d12491f, type: 3}
   m_PrefabInstance: {fileID: 1119254215}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1119254217 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 136136601897046069, guid: 473d95ec2d76587458c1ab972d12491f, type: 3}
+  m_PrefabInstance: {fileID: 1119254215}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &1119254218 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6121428779935263996, guid: 473d95ec2d76587458c1ab972d12491f, type: 3}
+  m_PrefabInstance: {fileID: 1119254215}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &1119254219 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2740815370884602402, guid: 473d95ec2d76587458c1ab972d12491f, type: 3}
+  m_PrefabInstance: {fileID: 1119254215}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &1119254220 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7513959546198655846, guid: 473d95ec2d76587458c1ab972d12491f, type: 3}
+  m_PrefabInstance: {fileID: 1119254215}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &1119254221 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6950407400304142562, guid: 473d95ec2d76587458c1ab972d12491f, type: 3}
+  m_PrefabInstance: {fileID: 1119254215}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
 --- !u!1 &1174860564
 GameObject:
   m_ObjectHideFlags: 0
@@ -3000,7 +3055,8 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4601413988684102961, guid: 60b79873657e82944bd2cf530b540bf7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3662,6 +3718,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1793033352}
+  - component: {fileID: 1793033353}
   m_Layer: 5
   m_Name: EnemyCombatUI
   m_TagString: Untagged
@@ -3689,6 +3746,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 0}
+--- !u!114 &1793033353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793033351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be915ba7aca971d4b8f03e1b3f87a361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterCombatUI
+  curHPText: {fileID: 1119254220}
+  healthBar: {fileID: 1119254221}
+  maxHPText: {fileID: 1119254219}
+  curBlockText: {fileID: 1119254218}
+  curDamageText: {fileID: 1119254217}
 --- !u!1 &1841405516
 GameObject:
   m_ObjectHideFlags: 0
