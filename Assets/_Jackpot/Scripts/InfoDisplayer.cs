@@ -26,12 +26,12 @@ public abstract class InfoDisplayer : MonoBehaviour
 
     protected virtual void Start()
     {
-        if(miPanel == null)
-        {
-            miPanel = GetComponentInChildren<InformationPanel>();
-            if(miPanel == null)
-                Debug.LogError("No se encontró el panel de informacion.");
-        }
+        //if(miPanel == null)
+        //{
+        //    miPanel = GetComponentInChildren<InformationPanel>();
+        //    if(miPanel == null)
+        //        Debug.LogError("No se encontró el panel de informacion.");
+        //}
     }
 }
 

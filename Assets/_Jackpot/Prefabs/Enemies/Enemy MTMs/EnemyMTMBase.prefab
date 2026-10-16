@@ -34,7 +34,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2299991997165695584, guid: 60b79873657e82944bd2cf530b540bf7, type: 3}
       propertyPath: m_Name
-      value: EnemyMTM
+      value: EnemyMTMBase
       objectReference: {fileID: 0}
     - target: {fileID: 2811006739376024170, guid: 60b79873657e82944bd2cf530b540bf7, type: 3}
       propertyPath: m_SizeDelta.x
@@ -151,6 +151,8 @@ PrefabInstance:
     - {fileID: 7102870041057325598, guid: 60b79873657e82944bd2cf530b540bf7, type: 3}
     - {fileID: 2859635406410286642, guid: 60b79873657e82944bd2cf530b540bf7, type: 3}
     - {fileID: 3737200528918452704, guid: 60b79873657e82944bd2cf530b540bf7, type: 3}
+    - {fileID: 4397001935529413723, guid: 60b79873657e82944bd2cf530b540bf7, type: 3}
+    - {fileID: 2467852292215435310, guid: 60b79873657e82944bd2cf530b540bf7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60b79873657e82944bd2cf530b540bf7, type: 3}

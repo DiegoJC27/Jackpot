@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public abstract class Ficha : InfoDisplayer
 {
-    public Image imagen;
+    public SpriteRenderer Srenderer;
     public Sprite sprite;
     public CharacterController myCharacter;
     public Ranura myRanura;
@@ -27,10 +27,11 @@ public abstract class Ficha : InfoDisplayer
         myRanura = ran;
     }
     
-    private void Start()
+    protected override void Start()
     {
-        imagen = GetComponent<Image>();
-        imagen.sprite = sprite;
+        base.Start();
+        Srenderer = GetComponentInChildren<SpriteRenderer>();
+        Srenderer.sprite = sprite;
     }
 
     public virtual void HacerMiAccion()

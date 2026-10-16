@@ -135,7 +135,7 @@ MonoBehaviour:
   description: "+1 da\xF1o"
   elapsedStay: 0
   imagen: {fileID: 0}
-  sprite: {fileID: 7491653927272227976, guid: 32e3ce1c3e236444f864531923f8e83b, type: 3}
+  sprite: {fileID: -31415569341861333, guid: 548a4c018bde4d54f9a3a1a2c6b16b1b, type: 3}
   myCharacter: {fileID: 0}
   myRanura: {fileID: 0}
   exhausted: 0

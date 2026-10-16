@@ -6,4 +6,12 @@ public class EnemyController : CharacterController
     {
         Destroy(gameObject);
     }
+
+    public void SetCombatUI(CharacterCombatUI enemyCombatUI)
+    {
+               if (combatUI == null)
+        {
+            combatUI = enemyCombatUI;
+        }
+    }
 }
