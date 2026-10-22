@@ -129,13 +129,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581863f63c586d84bb833f953ad984e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::F_Espada
-  miPanel: {fileID: 0}
+  panelPivot: {fileID: 8145866625906823799}
   objName: Daga
   type: 0
   description: "+1 da\xF1o"
-  elapsedStay: 0
-  imagen: {fileID: 0}
+  Srenderer: {fileID: 0}
   sprite: {fileID: -31415569341861333, guid: 548a4c018bde4d54f9a3a1a2c6b16b1b, type: 3}
   myCharacter: {fileID: 0}
   myRanura: {fileID: 0}
   exhausted: 0
+--- !u!4 &8145866625906823799 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6689299970112167736, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
+  m_PrefabInstance: {fileID: 3305295127533309263}
+  m_PrefabAsset: {fileID: 0}

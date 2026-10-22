@@ -8,7 +8,6 @@ public abstract class Ficha : InfoDisplayer
     public CharacterController myCharacter;
     public Ranura myRanura;
     public bool exhausted = false;
-    bool alreadyDoubled = false;
     public void SetMyCharacter(CharacterController chara) { 
         if(chara == null)
         {
@@ -27,26 +26,12 @@ public abstract class Ficha : InfoDisplayer
         myRanura = ran;
     }
     
-    protected override void Start()
+    protected void Start()
     {
-        base.Start();
         Srenderer = GetComponentInChildren<SpriteRenderer>();
         Srenderer.sprite = sprite;
     }
 
-    public virtual void HacerMiAccion()
-    {
-        if (CheckForGreenBloqued() && !alreadyDoubled) {
+    public abstract void HacerMiAccion();
 
-            alreadyDoubled = true;
-            HacerMiAccion();
-        }
-        alreadyDoubled = false;
-        Debug.Log("Hago mi cosa");
-    }
-
-    protected bool CheckForGreenBloqued()
-    {
-        return myRanura.miColor == ColoresRanura.verde && !myRanura.miRueda.Locked;
-    }
 }

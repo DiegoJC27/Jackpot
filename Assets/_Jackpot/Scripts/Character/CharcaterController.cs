@@ -56,6 +56,6 @@ public abstract class CharacterController : MonoBehaviour
     public virtual void ResolveMTM()
     {
         mtm.ResolveFichasActions();
-        mtm.CheckSlotsColor();
+        mtm.CheckRanuraBonuses();
     }
 }

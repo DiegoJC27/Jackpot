@@ -129,13 +129,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5720c5f355e094a94e0a3e227f57c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::F_Escudo
-  miPanel: {fileID: 0}
+  panelPivot: {fileID: 5877524311749722935}
   objName: Broquel
   type: 0
   description: +1 defensa
-  elapsedStay: 0
-  imagen: {fileID: 0}
+  Srenderer: {fileID: 0}
   sprite: {fileID: -718180021, guid: 548a4c018bde4d54f9a3a1a2c6b16b1b, type: 3}
   myCharacter: {fileID: 0}
   myRanura: {fileID: 0}
   exhausted: 0
+--- !u!4 &5877524311749722935 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6689299970112167736, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
+  m_PrefabInstance: {fileID: 955893252425358351}
+  m_PrefabAsset: {fileID: 0}

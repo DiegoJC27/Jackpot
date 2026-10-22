@@ -49,7 +49,6 @@ public class MaquinaTragamonedas : MonoBehaviour
         }
         Spin();
     }
-
     public void ResolveFichasActions()
     {
         foreach (Rueda rueda in ruedas)
@@ -60,33 +59,23 @@ public class MaquinaTragamonedas : MonoBehaviour
             }
         }
     }
-    public void CheckSlotsColor()
+
+    public void CheckRanuraBonuses()
     {
-        ColoresRanura color = ColoresRanura.notAsigned;
         foreach (Rueda rueda in ruedas)
         {
-            if (color == ColoresRanura.notAsigned)
-            {
-                color = rueda.ranuraSelected.miColor;
-                continue;
-            }
-            if (color != rueda.ranuraSelected.miColor)
-                return;
+            rueda.ranuraSelected.CheckBonusCondition();
         }
-
-        switch (color)
+    }
+    public bool AllSlotsSameColor()
+    {
+        foreach (Rueda rueda in ruedas)
         {
-            case ColoresRanura.azul:
-                myCharacter.UpdateBlock(ruedas.Count);
-                break;
-            case ColoresRanura.rojo:
-                myCharacter.UpdateDamage(ruedas.Count);
-                break;
-            case ColoresRanura.verde:
-                break;
-            case ColoresRanura.notAsigned:
-                Debug.Log("Algo se echó a perder, color no asignado");
-                break;
+            if (rueda.ranuraSelected.ColorRanura != ruedas[0].ranuraSelected.ColorRanura)
+            {
+                return false;
+            }
         }
+        return true;
     }
 }
