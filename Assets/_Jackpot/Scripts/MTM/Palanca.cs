@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class Palanca : MTMTButton
+public class Palanca : MonoBehaviour, IMTMTButton
 {
     public MaquinaTragamonedas mtm;
     [SerializeField] PlayerController player;
     [SerializeField] CombatStateMachine csm;
-    public override void OnClick()
+    public void OnClick()
     {
         if (player.GetCurTokens() <= 0)
         {

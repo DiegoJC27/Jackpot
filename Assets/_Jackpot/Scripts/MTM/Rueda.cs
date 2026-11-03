@@ -17,7 +17,7 @@ public class Rueda : MonoBehaviour
     {
         foreach(Ranura ranura in ranuras)
         {
-            ranura.SetMiRueda(this);
+            ranura.InitializeRanura(this);
         }
     }
     public IEnumerator SpinFor(float timeToSpin)

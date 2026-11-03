@@ -20,6 +20,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.073584795
       objectReference: {fileID: 0}
+    - target: {fileID: 4200683977678373091, guid: cc66b3a5311988d439886037c3656e34, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6965947762569587343, guid: cc66b3a5311988d439886037c3656e34, type: 3}
       propertyPath: m_Name
       value: RanuraAzul
@@ -94,8 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8ad4ebf399db874c972b2466e6db73c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RanuraAzul
+  objName: "Ranura Az\xFAl"
+  type: 1
+  description: "Si todas tus ranuras son rojas, +1 defensa por ranura az\xFAl"
   panelPivot: {fileID: 214540066461794993}
-  elapsedStay: 0
   fichaContenida: {fileID: 0}
   colorRanura: 0
   miRueda: {fileID: 0}

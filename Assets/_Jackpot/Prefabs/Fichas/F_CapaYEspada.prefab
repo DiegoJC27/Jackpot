@@ -117,10 +117,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 776e61e4a65537b40b5b2ada42c0bc55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  panelPivot: {fileID: 8173792947337908395}
-  objName: 
+  objName: Capa y Esada
   type: 0
-  description: 
+  description: "+1 da\xF1o y +1 defensa"
+  panelPivot: {fileID: 8173792947337908395}
   Srenderer: {fileID: 0}
   sprite: {fileID: 0}
   myCharacter: {fileID: 0}

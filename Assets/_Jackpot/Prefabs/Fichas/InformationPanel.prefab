@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 5, y: -5}
-  m_SizeDelta: {x: 190, y: 25}
+  m_SizeDelta: {x: 230, y: 25}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &4493507895909059421
 CanvasRenderer:
@@ -311,7 +311,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 5, y: -50}
-  m_SizeDelta: {x: 190, y: 50}
+  m_SizeDelta: {x: 230, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &4214354348999697082
 CanvasRenderer:
@@ -449,10 +449,10 @@ RectTransform:
   - {fileID: 8413961983048023207}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: 0}
-  m_SizeDelta: {x: 200, y: 95}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 240, y: 95}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &1767824096370236280
 CanvasRenderer:
@@ -504,7 +504,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f06c8b804341034e80fd3df65a21c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InformationPanel
-  miInfoObj: {fileID: 0}
   nameText: {fileID: 1711598153822083038}
   typeText: {fileID: 470368334232190406}
   descriptionText: {fileID: 5940105451946903121}

@@ -3,10 +3,11 @@ public class RanuraRoja : Ranura
 {
     protected override void Start()
     {
+        base.Start();
         colorRanura = ColoresRanura.rojo;
     }
     protected override void GainBonus()
     {
-        Debug.Log("Ganaste un bonus rojo");
+        myCharacter.UpdateDamage(1);
     }
 }

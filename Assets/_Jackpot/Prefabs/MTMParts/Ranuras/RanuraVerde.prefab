@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6965947762569587343, guid: cc66b3a5311988d439886037c3656e34, type: 3}
       propertyPath: m_Name
-      value: RanuraVerda
+      value: RanuraVerde
       objectReference: {fileID: 0}
     - target: {fileID: 8020107482108015824, guid: cc66b3a5311988d439886037c3656e34, type: 3}
       propertyPath: m_LocalPosition.x
@@ -89,8 +89,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2da82dee1cc5a894ab44dd3bba39a131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RanuraVerde
+  objName: Ranura Verde
+  type: 1
+  description: Si esta rueda no es bloqueada, vuelvo a jugar mi ficha
   panelPivot: {fileID: 8472375272947440348}
-  elapsedStay: 0
   fichaContenida: {fileID: 0}
   colorRanura: 0
   miRueda: {fileID: 0}

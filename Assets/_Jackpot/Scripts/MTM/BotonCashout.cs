@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class BotonCashout : MTMTButton
+public class BotonCashout : MonoBehaviour, IMTMTButton
 {
     [SerializeField] CombatStateMachine csm;
 
-    public override void OnClick()
+    public void OnClick()
     {
         csm.EnterEndPhase();
     }

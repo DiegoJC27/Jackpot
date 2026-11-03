@@ -4,10 +4,11 @@ public class RanuraAzul : Ranura
 {
     protected override void Start()
     {
+        base.Start();
         colorRanura = ColoresRanura.azul;
     }
     protected override void GainBonus()
     {
-        Debug.Log("Ganaste un bonus azul");
+        myCharacter.UpdateBlock(1);
     }
 }

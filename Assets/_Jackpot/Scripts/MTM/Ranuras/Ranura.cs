@@ -13,18 +13,35 @@ public abstract class Ranura : InfoDisplayer
     [SerializeField ]protected ColoresRanura colorRanura;
     public ColoresRanura ColorRanura => colorRanura;
     public Rueda miRueda;
-    public void SetMiRueda(Rueda rueda) 
+
+    protected CharacterController myCharacter;
+    public void InitializeRanura(Rueda rueda) 
     {  
         if(rueda == null)
         {
             Debug.LogError("La rueda que se intenta asignar es nula");
             return;
         }
-        miRueda = rueda; 
+        miRueda = rueda;
+        if (fichaContenida == null)
+        {
+            fichaContenida = GetComponentInChildren<Ficha>();
+            if (fichaContenida == null)
+                Debug.LogError("La ficha contenida en la ranura es nula");
+        }
         fichaContenida.SetMyCharacter(miRueda.MTM.MyCharacter);
+        myCharacter = miRueda.MTM.MyCharacter;
         fichaContenida.SetMyRanura(this);
     }
-    protected abstract void Start();
+    protected virtual void Start()
+    {
+        if(fichaContenida == null)
+        {
+            fichaContenida = GetComponentInChildren<Ficha>();
+            if(fichaContenida == null)
+                Debug.LogError("La ficha contenida en la ranura es nula");
+        }
+    }
     public virtual void CheckBonusCondition()
     {
         if (miRueda.MTM.AllSlotsSameColor()) { 
@@ -32,4 +49,6 @@ public abstract class Ranura : InfoDisplayer
         }
     }
     protected abstract void GainBonus();
+
+    
 }

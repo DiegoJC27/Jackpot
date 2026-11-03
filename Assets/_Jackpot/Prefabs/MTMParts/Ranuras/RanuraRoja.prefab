@@ -82,11 +82,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531379d2ac4e1784ba38bbd05306a379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RanuraRoja
+  objName: Ranura Roja
+  type: 1
+  description: "Si todas tus ranuras son rojas, +1 da\xF1o por ranura roja"
   panelPivot: {fileID: 4528499418267534913}
-  objName: 
-  type: 0
-  description: 
-  elapsedStay: 0
   fichaContenida: {fileID: 0}
   colorRanura: 0
   miRueda: {fileID: 0}

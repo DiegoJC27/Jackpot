@@ -4,6 +4,7 @@ public class RanuraVerde : Ranura
 {
     protected override void Start()
     {
+        base.Start();
         colorRanura = ColoresRanura.verde;
     }
     public override void CheckBonusCondition()
@@ -15,7 +16,7 @@ public class RanuraVerde : Ranura
     }
     protected override void GainBonus()
     {
-        Debug.Log("Ganaste un bonus verde");
+        MiFicha.HacerMiAccion();
     }
 }
 

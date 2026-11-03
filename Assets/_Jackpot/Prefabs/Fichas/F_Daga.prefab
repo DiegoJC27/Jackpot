@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 1935625242877318052, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7491653927272227976, guid: 32e3ce1c3e236444f864531923f8e83b, type: 3}
+      objectReference: {fileID: -31415569341861333, guid: 548a4c018bde4d54f9a3a1a2c6b16b1b, type: 3}
     - target: {fileID: 5519162485831548249, guid: c7e720beaf78d3d468a3e72b521a6e51, type: 3}
       propertyPath: m_Name
       value: F_Daga
@@ -129,10 +129,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581863f63c586d84bb833f953ad984e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::F_Espada
-  panelPivot: {fileID: 8145866625906823799}
   objName: Daga
   type: 0
   description: "+1 da\xF1o"
+  panelPivot: {fileID: 8145866625906823799}
   Srenderer: {fileID: 0}
   sprite: {fileID: -31415569341861333, guid: 548a4c018bde4d54f9a3a1a2c6b16b1b, type: 3}
   myCharacter: {fileID: 0}
