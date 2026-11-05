@@ -26,6 +26,7 @@ public class Rueda : MonoBehaviour
         ranuraIndex = Random.Range(0,ranuras.Length);
         while (timeToSpin > elapsedTime)
         {
+            ranuras[ranuraIndex].OnTurnDown();
             ranuras[ranuraIndex].gameObject.SetActive(false);
             ranuraIndex++;
             if (ranuraIndex % ranuras.Length == 0 && ranuraIndex != 0)

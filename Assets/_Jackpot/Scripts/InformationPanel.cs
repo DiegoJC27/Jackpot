@@ -22,5 +22,3 @@ public class InformationPanel : MonoBehaviour
         descriptionText.text = infoObj.description;
     }   
 }
-
-

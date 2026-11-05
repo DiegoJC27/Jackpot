@@ -24,11 +24,9 @@ public class InfoPanelManager : MonoBehaviour
     [SerializeField] private InformationPanel panelPrefab;
 
     const float CANVAS_WIDTH = 800;
-    float OFFSET_FRACTION = 45;
+    const float OFFSET_FRACTION = 30;
     float offset;
     float panelWidth = 270;
-    private Vector2 RIGHT = new Vector2(0f, 0.5f);
-    private Vector2 LEFT = new Vector2(1f, 0.5f);
 
     void Start()
     {

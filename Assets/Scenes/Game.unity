@@ -310,7 +310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.11136082, g: 0.316133, b: 0.4292453, a: 0.72156864}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2373,8 +2373,8 @@ CanvasGroup:
   m_GameObject: {fileID: 985254095}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!1 &1002479853
 GameObject:
@@ -3873,7 +3873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.5281239, g: 0.7105513, b: 0.8113208, a: 0.1254902}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5000,9 +5000,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1991571652}
-  - {fileID: 985254099}
-  - {fileID: 203464243}
   - {fileID: 786658217}
   - {fileID: 1475660693}
   - {fileID: 963589757}
   - {fileID: 460923507}
+  - {fileID: 985254099}
+  - {fileID: 203464243}

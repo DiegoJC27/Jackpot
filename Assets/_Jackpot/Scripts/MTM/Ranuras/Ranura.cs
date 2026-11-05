@@ -50,5 +50,13 @@ public abstract class Ranura : InfoDisplayer
     }
     protected abstract void GainBonus();
 
+    public override void OnTurnDown()
+    {
+        base.OnTurnDown();
+        if (fichaContenida != null)
+        {
+            fichaContenida.OnTurnDown();
+        }
+    }
     
 }

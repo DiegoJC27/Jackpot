@@ -17,6 +17,11 @@ public abstract class InfoDisplayer : MonoBehaviour, IPointerEnterHandler, IPoin
     {
         InfoPanelManager.Instance.HidePanel(curPanel);
     }
+
+    public virtual void OnTurnDown()
+    {
+        InfoPanelManager.Instance.HidePanel(curPanel);
+    }
 }
 public enum ObjectType
 {
