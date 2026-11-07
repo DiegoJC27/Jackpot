@@ -85,6 +85,7 @@ MonoBehaviour:
   objName: Ranura Roja
   type: 1
   description: "Si todas tus ranuras son rojas, +1 da\xF1o por ranura roja"
+  titleColor: {r: 0.95294124, g: 0, b: 0, a: 0}
   panelPivot: {fileID: 4528499418267534913}
   fichaContenida: {fileID: 0}
   colorRanura: 0

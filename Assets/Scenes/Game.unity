@@ -1847,6 +1847,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CombatSelector
   enemyList:
   - {fileID: 4328640630754510160, guid: fe2d86e07a178af4a9a5b2c6c07995bd, type: 3}
+  - {fileID: 8373848931742224313, guid: 47960ada6c004d4439f503fc7335e7c5, type: 3}
+  - {fileID: 6670303795286472975, guid: 5c078f918fb55234d9e8d506c6e2f5d9, type: 3}
   combatManager: {fileID: 786658219}
   enemyTrans: {fileID: 460923507}
   enemyCombatUI: {fileID: 1793033353}

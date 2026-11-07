@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.Scripting;
 using UnityEngine.UI;
 public class InfoPanelManager : MonoBehaviour
 {
@@ -19,8 +18,7 @@ public class InfoPanelManager : MonoBehaviour
     }
     
     private List<InformationPanel> panelsPool = new List<InformationPanel>();
-    private const int MAX_PANELS = 5;
-    private List<InformationPanel> activePanels = new List<InformationPanel>();
+    private const int MAX_PANELS = 6;
     [SerializeField] private InformationPanel panelPrefab;
 
     const float CANVAS_WIDTH = 800;
@@ -40,37 +38,26 @@ public class InfoPanelManager : MonoBehaviour
 
     public InformationPanel GetPanel()
     {
-        if (panelsPool.Count > 0)
+        foreach (InformationPanel panel in panelsPool)
         {
-            InformationPanel panel = panelsPool[0];
-            panelsPool.RemoveAt(0);
-            activePanels.Add(panel);
-            return panel;
+            if (!panel.gameObject.activeSelf)
+            {
+                return panel;
+            }
         }
-        else
-        {
-            Debug.LogWarning("No more panels available in the pool.");
-            return null;
-        }
+        Debug.LogWarning("No more panels available in the pool.");
+        return null;    
     }
 
     public void HidePanel(InformationPanel panelToHide)
     {
-        if (activePanels.Contains(panelToHide))
-        {
-            panelToHide.gameObject.SetActive(false);
-            activePanels.Remove(panelToHide);
-            panelsPool.Add(panelToHide);
-        }
-        else
-        {
-            Debug.LogWarning("Panel not found in active panels.");
-        }
+        if(panelToHide != null)
+            panelToHide.TurnOf();
     }
 
     public void HideAllPannels()
     {
-        foreach (InformationPanel panel in activePanels)
+        foreach (InformationPanel panel in panelsPool)
         {
             HidePanel(panel);
         }
@@ -78,7 +65,7 @@ public class InfoPanelManager : MonoBehaviour
     public InformationPanel ShowPanel(Transform ntrans, InfoDisplayer info)
     {
         InformationPanel curPanel = GetPanel();
-        curPanel.gameObject.SetActive(true);
+        curPanel.TurnOn();
         curPanel.ObtainObjInfo(info);
 
         offset = Screen.width / OFFSET_FRACTION;

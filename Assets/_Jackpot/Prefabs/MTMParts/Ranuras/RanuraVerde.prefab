@@ -92,6 +92,7 @@ MonoBehaviour:
   objName: Ranura Verde
   type: 1
   description: Si esta rueda no es bloqueada, vuelvo a jugar mi ficha
+  titleColor: {r: 0.28627452, g: 0.78823537, b: 0.6509804, a: 0}
   panelPivot: {fileID: 8472375272947440348}
   fichaContenida: {fileID: 0}
   colorRanura: 0
