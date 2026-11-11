@@ -148,6 +148,9 @@ MonoBehaviour:
   MTM: {fileID: 0}
   lockIndicator: {fileID: 1447481466083381743}
   locked: 0
+  wheelRoll: {fileID: 8300000, guid: 7351139ab19cb1c4eb204ec1eeec201e, type: 3}
+  wheelLock: {fileID: 8300000, guid: 8274307250a6f85438dd682e1a7c088a, type: 3}
+  wheelUnlock: {fileID: 8300000, guid: f00fea3b6461d734c83a9427d77967f4, type: 3}
 --- !u!1001 &3055575589548643423
 PrefabInstance:
   m_ObjectHideFlags: 0

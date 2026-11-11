@@ -16,6 +16,7 @@ public class RanuraVerde : Ranura
     }
     protected override void GainBonus()
     {
+        base.GainBonus();
         MiFicha.HacerMiAccion();
     }
 }

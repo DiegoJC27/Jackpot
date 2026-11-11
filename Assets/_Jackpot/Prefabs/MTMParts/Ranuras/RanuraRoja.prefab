@@ -90,3 +90,4 @@ MonoBehaviour:
   fichaContenida: {fileID: 0}
   colorRanura: 0
   miRueda: {fileID: 0}
+  bonusSound: {fileID: 8300000, guid: 2d25e7225e8953f479abc85977e8c6e8, type: 3}

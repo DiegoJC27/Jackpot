@@ -6,24 +6,25 @@ public class Palanca : MonoBehaviour, IMTMTButton
     public MaquinaTragamonedas mtm;
     [SerializeField] PlayerController player;
     [SerializeField] CombatStateMachine csm;
+
+    [Header("Sonidos")]
+    [SerializeField] AudioClip insertChip;
     public void OnClick()
     {
         if (player.GetCurTokens() <= 0)
         {
-            Debug.Log("Ya no hay tokens");
             return;
         }
         if (mtm.spinning)
         {
-            Debug.Log("Sigue girando");
             return;
         }
         if (!csm.IsMainPhase())
         {
-            Debug.Log("No es fase principal");
             return;
         }
         player.UpdateTokens(-1);
+        AudioManager.Instance.PlaySound(insertChip);
         mtm.Spin();
     }
 }

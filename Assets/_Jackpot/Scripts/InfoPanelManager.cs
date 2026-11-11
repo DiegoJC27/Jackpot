@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using DG.Tweening;
 public class InfoPanelManager : MonoBehaviour
 {
     public static InfoPanelManager Instance { get; private set; }
@@ -25,7 +26,10 @@ public class InfoPanelManager : MonoBehaviour
     const float OFFSET_FRACTION = 30;
     float offset;
     float panelWidth = 270;
-
+    
+    Tween moveTween;
+    const float MOVE_DURATION = 1f;
+    [SerializeField] Ease ease = Ease.Linear;
     void Start()
     {
         for (int i = 0; i < MAX_PANELS; i++)
@@ -64,6 +68,10 @@ public class InfoPanelManager : MonoBehaviour
     }
     public InformationPanel ShowPanel(Transform ntrans, InfoDisplayer info)
     {
+        if (moveTween != null && moveTween.active ) {
+            moveTween.Kill();
+        }
+
         InformationPanel curPanel = GetPanel();
         curPanel.TurnOn();
         curPanel.ObtainObjInfo(info);
@@ -71,19 +79,21 @@ public class InfoPanelManager : MonoBehaviour
         offset = Screen.width / OFFSET_FRACTION;
         Vector2 screenPos = Camera.main.WorldToScreenPoint(ntrans.position);
         Vector2 canvasPos = (screenPos / Screen.width) * CANVAS_WIDTH;
+
         if (canvasPos.x + offset + panelWidth > CANVAS_WIDTH)
         {
-            screenPos.x -= offset;
             transform.GetComponent<RectTransform>().position = screenPos;
+            screenPos.x -= offset;
+            moveTween = transform.GetComponent<RectTransform>().DOMoveX(screenPos.x, MOVE_DURATION);
             GetComponent<GridLayoutGroup>().startCorner = GridLayoutGroup.Corner.UpperRight;
             GetComponent<GridLayoutGroup>().childAlignment = TextAnchor.MiddleRight;
             return curPanel;
         }
-        screenPos.x += offset;
         transform.GetComponent<RectTransform>().position = screenPos;
+        screenPos.x += offset;
+        moveTween = transform.GetComponent<RectTransform>().DOMoveX(screenPos.x, MOVE_DURATION);
         GetComponent<GridLayoutGroup>().startCorner = GridLayoutGroup.Corner.UpperLeft;
-        GetComponent<GridLayoutGroup>().childAlignment = TextAnchor.MiddleLeft;
-        
+        GetComponent<GridLayoutGroup>().childAlignment = TextAnchor.MiddleLeft;        
         return curPanel;
     }
 }

@@ -7,10 +7,12 @@ public class EndPhase : CombatState
     {
         stateMachine.Player.ResolveMTM();
         stateMachine.EnterCombatPhase();
+        elapsedTime = 0f;
     }
     protected override void OnUpdate()
     {
-        
+        elapsedTime += Time.deltaTime;
+
     }
     protected override void OnExit()
     {

@@ -97,6 +97,7 @@ MonoBehaviour:
   fichaContenida: {fileID: 0}
   colorRanura: 0
   miRueda: {fileID: 0}
+  bonusSound: {fileID: 8300000, guid: ed3dffcf8ebdff842a0d360af417bf23, type: 3}
 --- !u!4 &8472375272947440348 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4200683977678373091, guid: cc66b3a5311988d439886037c3656e34, type: 3}

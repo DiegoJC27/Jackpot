@@ -14,6 +14,9 @@ public abstract class Ranura : InfoDisplayer
     public Rueda miRueda;
 
     protected CharacterController myCharacter;
+
+    [Header("Sounds")]
+    [SerializeField] AudioClip bonusSound;
     public void InitializeRanura(Rueda rueda) 
     {  
         if(rueda == null)
@@ -47,7 +50,10 @@ public abstract class Ranura : InfoDisplayer
             GainBonus();
         }
     }
-    protected abstract void GainBonus();
+    protected virtual void GainBonus()
+    {
+        AudioManager.Instance.PlaySound(bonusSound);
+    }
 
     public override void OnTurnDown()
     {

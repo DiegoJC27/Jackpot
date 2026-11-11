@@ -13,6 +13,9 @@ public class MaquinaTragamonedas : MonoBehaviour
     public event Action OnWheelsStopSpinning; 
     public CharacterController MyCharacter => myCharacter;
     [SerializeField] private CharacterController myCharacter;
+
+    [Header("Sounds")]
+    [SerializeField] AudioClip wheelStop;
     public void Spin()
     {
         spinning = true;
@@ -32,6 +35,7 @@ public class MaquinaTragamonedas : MonoBehaviour
     public void OnStopSpinning()
     {
         wheelsSpinning--;
+        AudioManager.Instance.PlaySound(wheelStop);
         if (wheelsSpinning == 0)
         {
             spinning = false;

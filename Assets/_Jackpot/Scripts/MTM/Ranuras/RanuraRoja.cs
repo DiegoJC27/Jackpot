@@ -8,6 +8,7 @@ public class RanuraRoja : Ranura
     }
     protected override void GainBonus()
     {
+        base.GainBonus();
         myCharacter.UpdateDamage(1);
     }
 }

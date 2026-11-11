@@ -62,6 +62,7 @@ MonoBehaviour:
   plusSpinTime: 0.5
   spinning: 0
   myCharacter: {fileID: 0}
+  wheelStop: {fileID: 8300000, guid: 678ae1d4fa1f64142b07c7904005ea30, type: 3}
 --- !u!1 &2467852292215435310
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,6 +74,7 @@ GameObject:
   - component: {fileID: 7612020765210255294}
   - component: {fileID: 1996368666830546657}
   - component: {fileID: 3233738680726063142}
+  - component: {fileID: 3269200944914448524}
   m_Layer: 0
   m_Name: Cashout
   m_TagString: Untagged
@@ -200,6 +202,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3269200944914448524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2467852292215435310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0451156b1b06851459665fa6b214f3c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonCashout
+  csm: {fileID: 0}
 --- !u!1 &4397001935529413723
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,6 +226,7 @@ GameObject:
   - component: {fileID: 7969026312026747637}
   - component: {fileID: 1280659714601847310}
   - component: {fileID: 559500816433514463}
+  - component: {fileID: 937902231603848983}
   m_Layer: 0
   m_Name: Palanca
   m_TagString: Untagged
@@ -338,6 +354,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.8666667, y: 2.1}
   m_EdgeRadius: 0
+--- !u!114 &937902231603848983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4397001935529413723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1d906b6f7f0a94485369c1649e942a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Palanca
+  mtm: {fileID: 4112254222337328945}
+  player: {fileID: 0}
+  csm: {fileID: 0}
+  insertChip: {fileID: 8300000, guid: 0bc4a72c1a3543a478f3cb0fd884fd64, type: 3}
 --- !u!1 &5067486403948140404
 GameObject:
   m_ObjectHideFlags: 0
